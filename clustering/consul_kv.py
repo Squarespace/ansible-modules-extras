@@ -253,7 +253,7 @@ def main():
         retrieve=dict(required=False, default=True),
         state=dict(default='present', choices=['present', 'absent']),
         token=dict(required=False, default='anonymous', no_log=True),
-        value=dict(required=False)
+        value=dict(required=False, type='str')
     )
 
     module = AnsibleModule(argument_spec, supports_check_mode=False)
